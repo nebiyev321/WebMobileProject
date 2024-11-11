@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Form Filler Extension</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container my-3">
+        <h3 class="text-center">Auto Form Filler</h3>
+        <div class="mb-3">
+            <label for="profileSelect" class="form-label">Select Profile</label>
+            <select id="profileSelect" class="form-select">
+                <option value="default">Default Profile</option>
+                <option value="tech">Tech Profile</option>
+                <option value="marketing">Marketing Profile</option>
+            </select>
+            <div id="createProfile">
+                <button id="createProfile" class="btn btn-link mt-2">Create New Profile</button>
+            </div>
+        </div>
+        <h5>Custom Data Fields</h5>
+        <div id="customFields" class="mb-3">
+            <div class="mb-2">
+                <label for="nameField" class="form-label">Name</label>
+                <input type="text" id="nameField" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="mb-2">
+                <label for="experienceField" class="form-label">Experience</label>
+                <textarea id="experienceField" class="form-control" rows="3"
+                    placeholder="Describe your experience"></textarea>
+            </div>
+            <div class="mb-2">
+                <label for="skillsField" class="form-label">Skills</label>
+                <input type="text" id="skillsField" class="form-control" placeholder="Enter your skills">
+            </div>
+            <button id="saveProfile" class="btn btn-primary w-100 mt-3">Save Profile Data</button>
+        </div>
+        <h5>Form Field Mapping</h5>
+        <div id="fieldMapping" class="mb-3">
+            <p class="small text-muted">Map LinkedIn fields to form fields for accurate auto-filling.</p>
+        </div>
+        <div id="coverLetterSection" class="my-3">
+            <button id="generateCoverLetter" class="btn btn-secondary w-100">Generate Cover Letter</button>
+            <textarea id="coverLetterOutput" class="form-control mt-2" rows="5"
+                placeholder="Generated cover letter will appear here"></textarea>
+        </div>
+        <h5>Application Tracking Dashboard</h5>
+        <div id="applicationDashboard" class="mb-3">
+            <p class="small text-muted">Track your job applications submitted through this extension.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Position</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button id="restoreHistory" class="btn btn-outline-secondary">Restore Previous Form</button>
+            <button id="exportData" class="btn btn-outline-secondary">Export Data</button>
+            <button id="importData" class="btn btn-outline-secondary">Import Data</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
